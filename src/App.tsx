@@ -1,26 +1,73 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import BarGraph from './components/BarGraph';
 
-function App() {
+export default function App() {
+  const dataArray1 = [
+    {
+      value: 200,
+      legend: 'Year 1',
+    },
+    {
+      value: 300,
+      legend: 'Year 2',
+    },
+    {
+      value: 700,
+      legend: 'Year 3',
+    },
+    {
+      value: 500,
+      legend: 'Thereafter',
+    },
+  ];
+  const dataArray2 = [
+    {
+      value: 500,
+      legend: 'Year 1',
+    },
+    {
+      value: 300,
+      legend: 'Year 2',
+    },
+    {
+      value: -200,
+      legend: 'Year 3',
+    },
+    {
+      value: 700,
+      legend: 'Thereafter',
+    },
+  ];
+  const dataArray3 = [
+    {
+      value: -150,
+      legend: 'Year 1',
+    },
+    {
+      value: -300,
+      legend: 'Year 2',
+    },
+    {
+      value: -700,
+      legend: 'Year 3',
+    },
+    {
+      value: -500,
+      legend: 'Thereafter',
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <div className="container">
+      <h1>React TypeScript Bar Graph</h1>
+      <BarGraph dataArray={dataArray1} />
+      <BarGraph dataArray={dataArray2} />
+      <BarGraph dataArray={dataArray3} />
+      <footer className="footer">
+        <a href="https://dominicarrojado.com/posts/how-to-create-your-own-bar-graph-in-react-and-typescript-with-tests-part-1/">
+          Learn how to build this bar graph component in React and TypeScript
         </a>
-      </header>
+      </footer>
     </div>
   );
 }
-
-export default App;
